@@ -1,0 +1,175 @@
+@import url('https://fonts.google.com/specimen/Kumbh+Sans:wght:400;700;&display=swap');
+:root{
+    --dark-ryan:hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue:hsl(229, 23%, 23%);
+    --dark-greyish-blue:hsl(227, 10%, 46%);
+    --dark-grey: hsl(0, 0%, 59%)
+
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  justify-content: center;
+    background-color: var(--dark-ryan);
+    background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+    /*background:#f1f1f1*/ /*best background for white components*/ ;
+    font-size: 18px;
+
+    font-family: "Kumbh Sans", sans-serif;
+}
+
+.card-container{
+    width:300px;
+    height:400px;
+    background:white;
+    border-radius: 18px;
+    position: absolute;
+    
+    /*the next three lines upto "x" will keep our element at the centre in absolute positioning */
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* "x"*/
+                    /*The translate() CSS function repositions an element in the horizontal and/or vertical directions. Its result is a <transform-function> data type. 
+                    Syntax
+
+                * Single <length-percentage> values *
+                transform: translate(200px);
+                transform: translate(50%);
+
+                * Double <length-percentage> values *
+                transform: translate(100px, 200px);
+                transform: translate(100px, 50%);
+                transform: translate(30%, 200px);
+                transform: translate(30%, 50%);
+
+                Values
+
+                Single <length-percentage> values
+
+                    This value is a <length> or <percentage> representing the abscissa (horizontal, x-coordinate) of the translating vector. The ordinate (vertical, y-coordinate) of the translating vector will be set to 0. For example, translate(2px) is equivalent to translate(2px, 0). A percentage value refers to the width of the reference box defined by the transform-box property.
+                Double <length-percentage> values
+
+                    This value describes two <length> or <percentage> values representing both the abscissa (x-coordinate) and the ordinate (y-coordinate) of the translating vector. A percentage as first value refers to the width, as second part to the height of the reference box defined by the transform-box property.
+*/
+    box-shadow: 0px 1px 10px 1px #000;
+    /*
+    The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.
+     * Keyword values *
+     box-shadow: none;
+
+     * offset-x | offset-y | color *
+     box-shadow: 60px -16px teal;
+
+     * offset-x | offset-y | blur-radius | color *
+     box-shadow: 10px 5px 5px black;
+
+     * offset-x | offset-y | blur-radius | spread-radius | color *
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+     * inset | offset-x | offset-y | color *
+     box-shadow: inset 5em 1em gold;
+
+     * Any number of shadows, separated by commas *
+     box-shadow: 3px 3px red, -1em 0 0.4em olive;
+
+     * Global keywords *
+     box-shadow: inherit;
+     box-shadow: initial ; 
+     box-shadow: revert;
+      box-shadow: unset;
+      */
+
+}
+
+.upper-container{
+    height: 150px;
+    /*background: #7f00ff*/ ;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    background: url(images/bg-pattern-card.svg);
+}
+
+.image-container {
+    background: white;
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+    padding: 5px;
+    transform: translate(100px,100px);
+}
+.image-container img{
+    background: white;
+    width:80px;
+    height:80px;
+    border-radius: 50%;
+}
+.lower-container{
+    height: 250px;
+    background:whitesmoke;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    
+}
+.basic-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    padding-top: 50px;
+    text-align: center;
+    line-height: 0.3em;
+    border-bottom: solid 1px var(--dark-grey);
+}
+.name{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--very-dark-desaturated-blue);
+
+}
+.age{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--dark-grey);
+}
+.city{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-grey);
+}
+.stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:25px;
+    line-height: 0.3em;
+}
+.stats h4{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--very-dark-desaturated-blue);
+}
+.stats p{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--dark-grey);
+}
+/* R E S P O N S I V E */
+@media only screen and (max-width: 440px) {
+    .card {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
+  .attribution {
+       font-size: 11px; text-align: center;
+     
+    }
+  .attribution a { color: hsl(228, 45%, 44%); }
